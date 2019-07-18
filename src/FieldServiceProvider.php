@@ -22,7 +22,11 @@ class FieldServiceProvider extends ServiceProvider
 
         Nova::serving(function (ServingNova $event) {
             Nova::script('external-url-validator', __DIR__.'/../dist/js/field.js');
-            Nova::style('external-url-validator', __DIR__.'/../dist/css/field.css');
+			Nova::style('external-url-validator', __DIR__.'/../dist/css/field.css');
+
+			Nova::provideToScript([
+				'tool-translations' => $this->getTranslations(),
+			]);
         });
     }
 
@@ -49,5 +53,16 @@ class FieldServiceProvider extends ServiceProvider
     public function register()
     {
         //
+	}
+
+	private static function getTranslations()
+    {
+        $translationFile = __DIR__ . '/../resources/lang/' . app()->getLocale() . '.json';
+
+        if (!is_readable($translationFile)) {
+            return [];
+        }
+
+        return json_decode(file_get_contents($translationFile), true);
     }
 }

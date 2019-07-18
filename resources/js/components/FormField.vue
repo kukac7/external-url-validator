@@ -9,8 +9,8 @@
                 :placeholder="field.name"
                 v-model.lazy="value"
             />
-            <p v-if="Object.keys(status).length && status.success" class="my-2 text-success">Valid url.</p>
-            <p v-if="Object.keys(status).length && !status.success" class="my-2 text-danger">Not valid url.</p>
+            <p v-if="Object.keys(status).length && status.success" class="my-2 text-success">{{ __('Valid url.') }}</p>
+            <p v-if="Object.keys(status).length && !status.success" class="my-2 text-danger">{{ __('Not valid url.') }}</p>
         </template>
     </default-field>
 </template>
