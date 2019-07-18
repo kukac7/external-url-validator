@@ -1,0 +1,33 @@
+{
+    "name": "kukac7/external-url-validator",
+    "description": "External Url Validator for Laravel Nova",
+    "keywords": [
+        "laravel",
+		"nova",
+		"external",
+		"url",
+		"validator"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kukac7\\ExternalUrlValidator\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kukac7\\ExternalUrlValidator\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
