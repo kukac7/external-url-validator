@@ -46,7 +46,7 @@ export default {
                 Nova.request().post(this.apiUrl, { url: val })
                 .then((res) => {
                     console.log(res);
-                    this.status = res.data.data;
+                    this.status = res.data;
                 })
                 .catch((err) => {
                     console.log(err);
