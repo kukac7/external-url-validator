@@ -22,7 +22,7 @@ composer require kukac7/external-url-validator
 
 ## Security
 
-If you discover any security related issues, please email robi@dpb.hu instead of using the issue tracker.
+If you discover any security related issues, please using the issue tracker.
 
 ## Credits
 
