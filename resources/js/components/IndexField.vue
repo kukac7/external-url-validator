@@ -1,5 +1,6 @@
 <template>
-    <a :href="field.value" target="_blank" class="no-underline font-bold dim text-primary">{{ field.value }}</a>
+    <a :href="field.value" v-if="field.value" target="_blank" class="no-underline font-bold dim text-primary whitespace-no-wrap text-left">{{ field.value }}</a>
+    <span v-else class="whitespace-no-wrap text-left">-</span>
 </template>
 
 <script>

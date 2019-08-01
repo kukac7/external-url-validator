@@ -15,10 +15,37 @@ composer require kukac7/external-url-validator
 ```
 
 ## Usage
-... (soon)
+Add a new `ExternalUrlValidator` field to your Nova Resource:
+
+```php
+use Kukac7\ExternalUrlValidator\ExternalUrlValidator;
+
+class Link extends Resource
+{
+	// ...
+
+	public function fields(Request $request)
+	{
+		return [
+			// ...
+
+			ExternalUrlValidator::make('URL', 'url'),
+
+			// ...
+		];
+	}
+}
+```
 
 ## Options
-... (soon)
+
+### API Url
+
+Set custom validate API url:
+
+```php
+ExternalUrlValidator::make('URL', 'url')->apiUrl('http://example.test/api/validate-url'),
+```
 
 ## Security
 
