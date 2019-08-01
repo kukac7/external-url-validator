@@ -22,18 +22,18 @@ use Kukac7\ExternalUrlValidator\ExternalUrlValidator;
 
 class Link extends Resource
 {
-	// ...
+    // ...
 
-	public function fields(Request $request)
-	{
-		return [
-			// ...
+    public function fields(Request $request)
+    {
+        return [
+            // ...
 
-			ExternalUrlValidator::make('URL', 'url'),
+            ExternalUrlValidator::make('URL', 'url'),
 
-			// ...
-		];
-	}
+            // ...
+        ];
+    }
 }
 ```
 
